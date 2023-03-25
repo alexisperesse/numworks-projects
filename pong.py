@@ -10,9 +10,9 @@ print("play1vmur()")
 bluescore=0
 redscore=0
 
-def initialisationDuFichierÀPart():
-  FHighScore=open("highscore.py","w")
-  FHighScore.write("10")
+#def initialisationDuFichierÀPart():
+#  FHighScore=open("highscore.py","w")
+#  FHighScore.write("10")
 
 def initialisation():
   global murscore, endloop, y1, y2, xballe, yballe, incrementx, incrementy
@@ -147,9 +147,9 @@ def fautetestmur():
     endloop=1
 
 def play1vmur():
-  FHighScore=open("highscore.py","r")
-  HighScore=FHighScore.read(2)
-  Fhighscore.close
+ # FHighScore=open("highscore.py","r")
+ # HighScore=FHighScore.read(2)
+ # Fhighscore.close
   initialisation()
   fill_rect(xballe,yballe,10,10,color(255,255,0))
   fill_rect(310,y2,5,50,color(0,0,255))
@@ -160,18 +160,17 @@ def play1vmur():
     bordertest()
     reboundtestmur()
     fautetestmur()
-  print("???")
   if murscore<10:
     draw_string("Ton score est de "+str(murscore)+" (cheh)",45,80)
-    draw_string("Record actuel: "+str(Highscore),75,150)
+#    draw_string("Record actuel: "+str(Highscore),75,150)
   if murscore>=10:
     draw_string("Ton score est de "+str(murscore)+" bravo !",35,80)
-    draw_string("Record actuel : "+str(Highscore),75,150)
-  if murscore>int(Highscore):
-    Highscore=murscore
-    draw_string("Nouveau record: "+str(Highscore),75,120)
-    FHighScore=open("highscore.py","w")
-    FHighScore.write(str(HighScore))
+#    draw_string("Record actuel : "+str(Highscore),75,150)
+#  if murscore>int(Highscore):
+#    Highscore=murscore
+#    draw_string("Nouveau record: "+str(Highscore),75,120)
+#    FHighScore=open("highscore.py","w")
+#    FHighScore.write(str(HighScore))
   while True:
     if keydown(KEY_OK):
       bluescore=0

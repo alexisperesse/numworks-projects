@@ -1,7 +1,7 @@
 # numworks-projects
 Support :
   Ce jeu est destiné à être joué sur une calculatrice numworks avec la version 2.05 d'Omega.
-  Il est aussi possible d'y jouer sans Omega, en revanche la notion de record ne sera plus fonctionnel.
+  Il est aussi possible d'y jouer sans Omega, en revanche la notion de record ne sera plus fonctionnelle.
 
 Principe du jeu :
   Ce programme python contient 2 modes de jeu :

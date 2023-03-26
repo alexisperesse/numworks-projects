@@ -15,3 +15,6 @@ Comment jouer :
   Le joueur rouge peut alors bouger sa raquette verticalement en utilisant les touches "7" pour monter et "0" pour descendre.
   Le joueur bleu, lui, bouge sa raquette grâce aux touches ")" pour menter et "EXE" pour descendre.
   A la fin de la partie il est possible de rejouer en cliquant sur "OK".
+
+Utilisation de la notion de record :
+  Afin d'utiliser cette fonctionnalité, il suffit de créer un fichier annexe se nommant "highscore.py" et de lancer la fonction initialisationDuFichierAnnexe().

@@ -8,7 +8,7 @@ print("play1v1()")
 print("play1vmur()")
 
 def initialisationDuFichierAnnexe():
-  FHighScore=open("highscore2.py","w")
+  FHighScore=open("highscore.py","w")
   FHighScore.write("10")
 
 bluescore=0
@@ -43,23 +43,23 @@ def raquette2(couleur):
     if couleur=="blanc":
       fill_rect(310,y2,5,50,color(255,255,255))
     elif couleur=="noir":
-      fill_rect(310,y2,5,50,color(255,255,255))
+      fill_rect(310,y2,5,50,color(0,0,0))
     y2-=3
     fill_rect(310,y2,5,50,color(0,0,255))
   if keydown (KEY_EXE):
     if couleur=="blanc":
       fill_rect(310,y2,5,50,color(255,255,255))
     elif couleur=="noir":
-      fill_rect(310,y2,5,50,color(255,255,255))
+      fill_rect(310,y2,5,50,color(0,0,0))
     y2+=3
     fill_rect(310,y2,5,50,color(0,0,255))
 
 def balle(couleur):
   global xballe, yballe
-   if couleur=="blanc":
-     fill_rect(xballe,yballe,10,10,color(255,255,255))
-   elif couleur=="noir":
-   	 fill_rect(xballe,yballe,10,10,color(0,0,0))
+  if couleur=="blanc":
+    fill_rect(xballe,yballe,10,10,color(255,255,255))
+  elif couleur=="noir":
+    fill_rect(xballe,yballe,10,10,color(0,0,0))
   xballe+=incrementx
   yballe+=incrementy
   fill_rect(xballe,yballe,10,10,color(255,255,0))
@@ -71,7 +71,6 @@ def reboundtest():
   for i in range(2):
     for i in range(2):
       if get_pixel(xtest,ytest)==color(0,0,255):
-        print("bleu repere")
         incrementx=-3
         incrementy=randint(-1,1)
       if get_pixel(xtest,ytest)==color(255,0,0):
@@ -113,7 +112,7 @@ def play1v1():
   fill_rect(5,y1,5,50,color(255,0,0))
   fill_rect(310,y2,5,50,color(0,0,255))
   sleep(3)
-  fill_rect(0,0,350,50,color(0,0,0))
+  fill_rect(0,0,350,50,color(255,255,255))
   while endloop==0:
     raquette1()
     raquette2("blanc")
@@ -160,7 +159,7 @@ def fautetestmur():
     endloop=1
 
 def play1vmur():
-  FHighScore=open("highscore2.py","r")
+  FHighScore=open("highscore.py","r")
   HighScore=FHighScore.read(2)
   FHighScore.close
   initialisation()
@@ -177,7 +176,7 @@ def play1vmur():
   if murscore>int(HighScore):
     HighScore=murscore
     draw_string("Nouveau record: "+str(HighScore),75,100)
-    FHighScore=open("highscore2.py","w")
+    FHighScore=open("highscore.py","w")
     FHighScore.write(str(HighScore))
     print(HighScore)
   elif murscore<10:

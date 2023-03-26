@@ -7,9 +7,9 @@ from time import *
 print("play1v1()")
 print("play1vmur()")
 
-def initialisationDuFichierAnnexe():
-  FHighScore=open("highscore.py","w")
-  FHighScore.write("10")
+def initialisationDuFichierAnnexe():                  #utilisable qu'avec Omega
+  FHighScore=open("highscore.py","w")                 #utilisable qu'avec Omega
+  FHighScore.write("10")                              #utilisable qu'avec Omega
 
 bluescore=0
 redscore=0
@@ -159,9 +159,9 @@ def fautetestmur():
     endloop=1
 
 def play1vmur():
-  FHighScore=open("highscore.py","r")
-  HighScore=FHighScore.read(2)
-  FHighScore.close
+  FHighScore=open("highscore.py","r")                   #utilisable qu'avec Omega
+  HighScore=FHighScore.read(2)                          #utilisable qu'avec Omega
+  FHighScore.close                                      #utilisable qu'avec Omega
   initialisation()
   fill_rect(0,0,350,222,color(0,0,0))
   fill_rect(xballe,yballe,10,10,color(255,255,0))
@@ -173,18 +173,17 @@ def play1vmur():
     bordertest()
     reboundtestmur()
     fautetestmur()
-  if murscore>int(HighScore):
-    HighScore=murscore
-    draw_string("Nouveau record: "+str(HighScore),75,100)
-    FHighScore=open("highscore.py","w")
-    FHighScore.write(str(HighScore))
-    print(HighScore)
+  if murscore>int(HighScore):                             #utilisable qu'avec Omega
+    HighScore=murscore                                    #utilisable qu'avec Omega
+    draw_string("Nouveau record: "+str(HighScore),75,100) #utilisable qu'avec Omega
+    FHighScore=open("highscore.py","w")                   #utilisable qu'avec Omega
+    FHighScore.write(str(HighScore))                      #utilisable qu'avec Omega
   elif murscore<10:
     draw_string("Ton score est de "+str(murscore)+" (cheh)",45,80)
-    draw_string("Record actuel: "+str(HighScore),75,150)
+    draw_string("Record actuel: "+str(HighScore),75,150)  #utilisable qu'avec Omega
   elif murscore>=10:
     draw_string("Ton score est de "+str(murscore)+" bravo !",35,80)
-    draw_string("Record actuel : "+str(HighScore),75,120)
+    draw_string("Record actuel : "+str(HighScore),75,120)  #utilisable qu'avec Omega
   while True:
     if keydown(KEY_OK):
       bluescore=0

@@ -120,6 +120,7 @@ def play1v1():
     reboundtest() 
     bordertest()
     fautetest()
+   fill_rect(0,0,350,222,color(255,255,255))
   if bluescore==3:
     draw_string("Le bleu a gagné !" ,85,80)
     draw_string("OK pour la revanche",70,120)
